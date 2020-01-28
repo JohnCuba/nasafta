@@ -37,7 +37,12 @@ bower_components
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
 
+# Lock files
+package-lock.json
+yarn.lock
+
 # Dependency directories
+.yarn/
 node_modules/
 jspm_packages/
 
