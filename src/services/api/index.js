@@ -6,7 +6,7 @@ export const getNeoArray = async (date, methods) => {
     const response = await fetch(`${URL}?${API_DATE}&${API_KEY}`);
     if (response.status == 200) {
       const json = await response.json();
-      methods.callbackOk(json)
+      methods.callbackOk(json.near_earth_objects[date])
     }
   } catch (error) {
     console.log(error);
