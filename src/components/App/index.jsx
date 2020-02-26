@@ -3,17 +3,20 @@ import {StoreContext, store} from '../../services/context/store';
 import {getNeoArray} from '../../services/api';
 import {getNearestObject} from '../../services/helper/math';
 
-import Container from '@material-ui/core/Container';
 import Hello from '../Hello';
-// import Stepper from '../Stepper';
 import EnterDate from '../EnterDate';
+import Messages from '../Messages';
 
 export default function App() {
+  const [showMessages, setShowMessages] = React.useState(false);
   const handleLoad = () => {
     getNeoArray(
       store.dob,
       {
-       callbackOk: (json) => store.setNeoDob(json)
+        callbackOk: (json) => {
+          store.setNeoDob(json);
+          setShowMessages(true);
+        }
       }
     )
   };
@@ -24,12 +27,11 @@ export default function App() {
 
   return (
     <StoreContext.Provider value={store}>
-      <Container maxWidth='xs'>
         <Hello />
         <EnterDate/>
         <button onClick={handleLoad}>tell me future</button>
         <button onClick={handleParse} >view distace</button>
-      </Container>
+        <Messages show={showMessages} />
     </StoreContext.Provider>
   )
 };
