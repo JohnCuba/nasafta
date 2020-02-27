@@ -1,10 +1,11 @@
 {
   "name": "nasafta",
   "scripts": {
-    "start": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "start": "parcel ./index.html",
+    "build": "parcel build ./index.html"
   },
   "dependencies": {
+    "@babel/types": "7.8.6",
     "animate.css": "3.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
