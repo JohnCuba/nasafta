@@ -1,4 +1,7 @@
+import {getStringDate} from '../helper/date';
+
 export const getNeoArray = async (date, methods) => {
+  if (date.length < 10) {date = getStringDate()}
   const URL = 'https://api.nasa.gov/neo/rest/v1/feed';
   const API_KEY = 'API_KEY=c1KA1Xb6Socj3dDqcVTx1gaNglghR5rRvYAZeK1g';
   const API_DATE = `start_date=${date}&end_date=${date}`;

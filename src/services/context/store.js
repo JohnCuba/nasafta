@@ -3,7 +3,7 @@ import {getStringDate} from '../helper/date';
 
 export const store = {
 // data
-  dob: getStringDate(new Date()),
+  dob: getStringDate(),
   neoDob: null,
 // methods
   changeDob: (payload) => store.dob = payload,
