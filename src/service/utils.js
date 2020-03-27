@@ -6,7 +6,19 @@ const getDateString = (date = new Date()) => (
   )}-${getDoubleNumb(date.getDate())}`
 );
 
+const getNearest = (objects) => (
+  objects
+    .reduce(
+      (prevObject, currObject) =>
+        currObject.close_approach_data[0].miss_distance.kilometers
+        <
+        prevObject.close_approach_data[0].miss_distance.kilometers
+        ? currObject : prevObject
+    )
+)
+
 export default {
   getDateString,
-  getDoubleNumb
+  getDoubleNumb,
+  getNearest
 };
