@@ -15,7 +15,6 @@
     "parcel-plugin-svelte": "^4.0.6"
   },
   "dependencies": {
-    "modern-normalize": "^0.6.0",
     "svelte": "^3.20.1"
   }
 }
