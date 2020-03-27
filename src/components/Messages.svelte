@@ -7,7 +7,11 @@
 </script>
 
 {#if $stage === 1}
-  <p transition:fly="{{ y: 400, duration: 3000 }}">
+  <p
+    in:fly='{{ y: 400, duration: 3000 }}'
+    out:fly='{{ y: -400, duration: 3000 }}'
+    on:introend='{() => stage.update(n => n+1)}'
+  >
     В этот день рядом с землей пронеслись {objectscount} объектов!
   </p>
 {/if}

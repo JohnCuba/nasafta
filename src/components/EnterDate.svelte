@@ -15,10 +15,10 @@
 </script>
 
 {#if $stage === 0}
-<section transition:fly="{{ y: -400, duration: 3000 }}">
-  <input type=date value={date} on:input={changeDate} />
-	<button on:click={handleLookup}>Look up!</button>
-</section>
+  <section out:fly='{{ y: -400, duration: 2000 }}'>
+    <input type=date value={date} on:input={changeDate} />
+    <button on:click={handleLookup}>Look up!</button>
+  </section>
 {/if}
 
 <style>
