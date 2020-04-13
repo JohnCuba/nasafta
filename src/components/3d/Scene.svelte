@@ -33,7 +33,7 @@ onMount(() => {
 </main>
 
 <style>
-main {
+#root {
   display: flex;
   flex-direction: column;
   justify-content: center;

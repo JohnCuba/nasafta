@@ -28,5 +28,6 @@
 <style>
   p {
     position: absolute;
+    color: azure;
   }
 </style>
