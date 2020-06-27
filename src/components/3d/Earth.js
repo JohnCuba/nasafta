@@ -1,7 +1,15 @@
 import * as THREE from 'three';
 
-let geometry = new THREE.SphereGeometry(10, 32, 32);
-let material = new THREE.MeshPhongMaterial();
-// material.map = THREE.ImageUtils.loadTexture('./static/maps/earthmap.jpg');
+export default function getEarth() {
+  let loader = new THREE.TextureLoader()
+  let geometry = new THREE.SphereGeometry(2.5, 32, 32);
+  let material = new THREE.MeshPhongMaterial()
+  loader.load(
+    'src/static/maps/earth.jpg',
+    (texture) => {
+      material = new THREE.MeshPhongMaterial({map: texture})
+    }
+  )
 
-export let earthmesh = new THREE.Mesh(geometry, material);
+  return new THREE.Mesh(geometry, material);
+}

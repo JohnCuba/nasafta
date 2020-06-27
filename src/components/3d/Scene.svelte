@@ -1,7 +1,8 @@
 <script>
 import {onMount} from 'svelte';
 import * as THREE from 'three';
-import {earthmesh} from './Earth.js';
+import getEarth from './earth.js';
+import getStar from './star.js';
 
 onMount(() => {
   let scene = new THREE.Scene();
@@ -10,11 +11,16 @@ onMount(() => {
   let renderer = new THREE.WebGLRenderer();
   renderer.setSize( window.innerWidth, window.innerHeight );
   document.getElementById('root').appendChild(renderer.domElement);
+  let light = new THREE.DirectionalLight( 0xffffff );
+  light.position.set( 5, 5, 5 ).normalize();
+  scene.add(light);
+
 
   // let geometry = new THREE.BoxGeometry();
   // let material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
   // let cube = new THREE.Mesh( geometry, material );
-  scene.add( earthmesh );
+  let earth = getEarth();
+  scene.add( earth );
 
   camera.position.z = 5;
 

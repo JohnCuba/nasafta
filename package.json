@@ -16,6 +16,7 @@
     "parcel-plugin-svelte": "^4.0.6"
   },
   "dependencies": {
+    "static": "^2.0.0",
     "svelte": "^3.20.1",
     "three": "^0.115.0"
   }
