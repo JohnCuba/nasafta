@@ -1,7 +1,7 @@
 <script>
 import {onMount} from 'svelte';
 import * as THREE from 'three';
-import getEarth from './earth';
+import getEarth from './Earth';
 import getStar from './star';
 
 onMount(() => {
