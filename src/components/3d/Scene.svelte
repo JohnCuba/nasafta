@@ -1,8 +1,8 @@
 <script>
 import {onMount} from 'svelte';
 import * as THREE from 'three';
-import getEarth from './earth.js';
-import getStar from './star.js';
+import getEarth from './earth';
+import getStar from './star';
 
 onMount(() => {
   let scene = new THREE.Scene();
