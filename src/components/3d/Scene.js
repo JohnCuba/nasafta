@@ -1,21 +1,21 @@
 import * as THREE from 'three';
-import getEarth from './Earth';
+import Earth from './Earth';
 
 export default class SceneManadger {
   scene = new THREE.Scene();
-  camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+  camera = new THREE.PerspectiveCamera( 25, window.innerWidth / window.innerHeight, 50, 1e7 );
   renderer = new THREE.WebGLRenderer();
   light = new THREE.DirectionalLight( 0xffffff );
 
   constructor() {
     this.renderer.setSize( window.innerWidth, window.innerHeight );
 
-    this.light.position.set( 5, 5, 5 ).normalize();
+    this.light.position.set( - 1, 0, 1 ).normalize();
     this.scene.add(this.light);
 
-    this.addObject(getEarth());
+    this.addObject(new Earth().getEarth());
 
-    this.camera.position.z = 5;
+    this.camera.position.z = 31855;
   }
 
   init(element) {
