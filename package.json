@@ -1,23 +1,18 @@
 {
-  "name": "nasafta",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "nasaftavite",
+  "version": "0.0.0",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
-    "postinstall": "rm -rf ./.cache && node ./postinstall.js"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@babel/polyfill": "^7.8.7",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-svelte": "^4.0.6"
+    "@babel/polyfill": "^7.12.1",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.7",
+    "svelte": "^3.37.0",
+    "vite": "^2.3.3"
   },
   "dependencies": {
-    "static": "^2.0.0",
-    "svelte": "^3.20.1",
-    "three": "^0.115.0"
+    "three": "^0.128.0"
   }
 }

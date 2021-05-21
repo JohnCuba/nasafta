@@ -1,4 +1,4 @@
-require('@babel/polyfill');
+import '@babel/polyfill';
 import utils from './utils';
 
 const getNeoArray = async (date) => {

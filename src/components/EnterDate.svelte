@@ -16,7 +16,7 @@
 
 {#if $stage === 0}
   <section out:fly='{{ y: -400, duration: 2000 }}'>
-    <input type=date value={date} on:input={changeDate} />
+    <input type=date on:input={changeDate} />
     <button on:click={handleLookup}>Look up!</button>
   </section>
 {/if}
